@@ -1,4 +1,11 @@
-  // Model for Quiz Questions
+/*
+        ---------------------------------------
+        Project: Bat and Brain Game Mobile Application
+        Date: April 4, 2024
+        Author: Ameer from Pakistan
+        ---------------------------------------
+        Description: Model code
+      */
   class QuizQuestion {
     final String question;
     final List<String> options;

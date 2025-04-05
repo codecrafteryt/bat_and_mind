@@ -1,11 +1,11 @@
-  /*
-    ---------------------------------------
-    Project: Plinkos Puzzle Game Mobile Application
-    Date: March 29, 2024
-    Author: Ameer from Pakistan
-    ---------------------------------------
-    Description: Extension
-  */
+/*
+        ---------------------------------------
+        Project: Bat and Brain Game Mobile Application
+        Date: April 4, 2024
+        Author: Ameer from Pakistan
+        ---------------------------------------
+        Description: ExtasionExtension
+      */
   import 'package:flutter/cupertino.dart';
   import 'package:flutter_screenutil/flutter_screenutil.dart';
 
