@@ -1,11 +1,11 @@
   /*
-          ---------------------------------------
-          Project: Bat and Brain Game Mobile Application
-          Date: April 4, 2024
-          Author: Ameer from Pakistan
-          ---------------------------------------
-          Description: result screen
-        */
+    ---------------------------------------
+    Project: Bat and Brain Game Mobile Application
+    Date: April 4, 2024
+    Author: Ameer from Pakistan
+    ---------------------------------------
+    Description: result screen
+  */
   import 'package:bat_and_mind/controller/quiz_controller.dart';
   import 'package:bat_and_mind/utils/extensions/extentions.dart';
   import 'package:bat_and_mind/utils/values/my_color.dart';
@@ -19,15 +19,19 @@
 
   class ResultScreen extends StatelessWidget {
     final QuizController controller = Get.find();
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         backgroundColor: MyColors.backGround,
         body: SafeArea(
-            child: Column(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomAppBar(title: "QUIZ",),
+                  CustomAppBar(title: "QUIZ"),
                   15.sbh,
                   Container(
                     height: 20.h,
@@ -35,10 +39,10 @@
                   ),
                   20.sbh,
                   Text(
-                      "QUIZ COMPLETE",
+                    "QUIZ COMPLETE",
                     style: kSize14DarkW400Text.copyWith(
                       color: MyColors.textColor,
-                      fontSize: 64,
+                      fontSize: 40.sp,
                       shadows: [
                         Shadow(
                           offset: Offset(2.w, 2.h),
@@ -51,10 +55,10 @@
                   20.sbh,
                   Text(
                     textAlign: TextAlign.center,
-                      "SCORE:\n${controller.score.value}/${controller.questions.length}",
+                    "SCORE:\n${controller.score.value}/${controller.questions.length}",
                     style: kSize14DarkW400Text.copyWith(
                       color: MyColors.textColor,
-                      fontSize: 99.sp,
+                      fontSize: 60.sp,
                       shadows: [
                         Shadow(
                           offset: Offset(2.w, 2.h),
@@ -64,7 +68,7 @@
                       ],
                     ),
                   ),
-                  13.sbh,
+                  50.sbh,
                   CustomButton(
                     text: "MENU",
                     textStyle: kSize14DarkW400Text.copyWith(
@@ -78,7 +82,7 @@
                         ),
                       ],
                     ),
-                    onPressed: (){
+                    onPressed: () {
                       Get.offAll(() => Menu());
                     },
                   ),
@@ -96,14 +100,16 @@
                         ),
                       ],
                     ),
-                    onPressed: (){
+                    onPressed: () {
                       controller.resetQuiz();
                       Get.offAll(() => Menu());
-                      },
+                    },
                   ),
                 ],
               ),
+            ),
           ),
+        ),
       );
     }
   }
